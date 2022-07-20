@@ -1,0 +1,77 @@
+
+
+
+
+.maincontainer{
+  position:absolute;
+  display:flex;
+  width: 900px;
+  height:350px;
+  background:none;
+  top: 70%;
+  left: 50%;
+  transform:translate(-50%,-50%);
+}
+.maincontainer2{
+  position:absolute;
+  display:flex;
+  width: 900px;
+  height:350px;
+  background:none;
+  top: 44%;
+  left: 50%;
+  transform:translate(-50%,-50%);
+}
+
+
+.card {
+  position:relative;
+  width:100%;
+  height:90%;
+  transform-style: preserve-3d;
+  transition:all 0.8s ease;
+  border: 2px solid #000;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.front{
+  position:absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  background: white;
+  color: #000;
+  text-align: center;
+  background-image: url('./images/mlb.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.back {
+  position:absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  background-size: 300px 300px;
+  color: white;
+  text-align: center;
+  transform: rotateY(180deg);
+  
+}
+
+
+.flipCard{
+  transform: rotateY(180deg)
+}
+
+.card:hover {
+  box-sizing: border-box;
+  box-shadow: inset 0px 0px 0px 5px rebeccapurple;
+  
+}
+body{
+  background-image: url('./images/old_yankee_stadium.jpg');
+  background-size: cover;
+}
+
