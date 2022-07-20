@@ -1,7 +1,3 @@
-
-
-
-
 .maincontainer{
   position:absolute;
   display:flex;
@@ -73,5 +69,11 @@
 body{
   background-image: url('./images/old_yankee_stadium.jpg');
   background-size: cover;
+  background-repeat: no-repeat;
 }
+ h1{
+text-align: center;
+color: white;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
 
+ }

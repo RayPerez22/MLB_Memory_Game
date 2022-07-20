@@ -13,7 +13,7 @@ const player2 = new Player('Junior',0)
 
 
 
-//create a function that flips the cards
+//flips the cards
 
 
 const card1 = {
@@ -48,18 +48,6 @@ const card8 = {
     dom: document.getElementById("card8"),
     value:''
 }
-
-
-// card1.dom.innerHTML = 'fdsfd'
-// const card1 = document.getElementById("card1")
-// const card2 = document.getElementById("card2")
-// const card3 = document.getElementById("card3")
-// const card4 = document.getElementById("card4")
-// const card5 = document.getElementById("card5")
-// const card6 = document.getElementById("card6")
-// const card7 = document.getElementById("card7")
-// const card8 = document.getElementById("card8")
-
 
 
 card1.dom.addEventListener("click",(e) => {
@@ -121,7 +109,7 @@ card8.dom.addEventListener("click",(e) => {
 
 const arrCards = [card1,card2,card3,card4,card5,card6,card7,card8]
 
-
+//Rnadomize the cards
 const randomize = ()=>{
     let list = ['A','A','B','B','C','C','D','D']
     list = list.sort(() => Math.random() - 0.5)
@@ -132,6 +120,8 @@ const randomize = ()=>{
 }
 randomize()
 
+
+//images for the cards
 for(item of arrCards){
     switch(item.dom.getAttribute('src')){
         case 'A':
@@ -160,6 +150,7 @@ function matchCards(a,b){
         console.log('no match')
     }
 }
+//Game function 
 function game(){
     if(chosenCards.length >= 2){
         setTimeout(matchCards(chosenCards[0],chosenCards[1]),2000)
@@ -168,6 +159,7 @@ function game(){
 
     }
 }
+//fuction to flip back the cards
 function flipBack(card){
     card.classList.toggle("flipCard")   
 }
